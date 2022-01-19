@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<!-- Шляпа -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма обратной связи</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <h1>Форма обратной связи</h1>
+    <div class="container">
+        <!-- action- адрес ресурса приемника, method- указание метода -->
+        <!-- enctype - указание кодировки при отправке запроса, в результате будет
+        корректно обработано содержимое прикрепляемого файла и других его параметров-->
+        <form action="http://httpbin.org/post" method="POST" enctype="multipart/form-data">
+
+            <!-- Документация -->
+            <a type="hidden" href="https://html5book.ru/html5-forms"></a>
+
+
+            <!-- Скрытое поле ввода -->
+            <input type="hidden" name="user id" value="6">
+
+            <!-- Группа форм отправки -->
+            <div class="form-group">
+                <!-- поле ввода -->
+                <label for="name" class="form-label">ФИО</label>
+                <!-- Атрибут name указывает название отправляемого параметра -->
+                <!-- value - значение по умолчанию, required - необходим ввод -->
+                <!-- Прочие атриб: readonly(запрет редактирования), disabled (запрет отправки значения) -->
+                <input id="name" type="text" name="name" value="" required autofocus>
+            </div>
+
+            <div class="form-group">
+                <label for="email" class="form-label">Почта</label>
+                <!-- type - тип формы ввода, placeholder - подсказка -->
+                <input id="email" type="email" name="email" placeholder="Введите email">
+            </div>
+
+
+
+            <!-- Группа radio-меток -->
+            <div class="form-group">
+                <p class="form-label">Как вы узнали о нас?</p>
+                <!-- name - связывает метки, value - значение выбора, checked - выбрано по умолчанию -->
+                <input type="radio" name="source" id="advertising" value="advertising" checked>
+                <!-- Атрибут for - отвечает за связь тега label с id radio-метки -->
+                <!-- Особенно здесь, при нажатии на название - пункт будет выбран -->
+                <label for="advertising">Реклама в интернете</label>
+                <input type="radio" name="source" id="friends" value="friends">
+                <label for="friends">Рассказали знакомые</label>
+            </div>
+
+
+
+            <!-- Выбор категории -->
+            <div class="form-group">
+                <label class="form-label" for="category">Категория обращения</label>
+                <select name="category" id="category">
+                    <option value="proposal">Предложение</option>
+                    <option value="claim">Претензия</option>
+                </select>
+            </div>
+
+
+
+            <!-- Блок сообщения -->
+            <!-- .form-group -->
+            <div class="form-group">
+                <!-- Тег textarea (в от личии input type="text"):больше символов, настройка блока -->
+                <label class="form-label" for="message">Отправка сообщения</label>
+                <textarea name="message" id="" cols="30" rows="10">Текст</textarea>
+            </div>
+
+
+
+            <!-- Блок отправки файла, добавили в тег form атрибут enctype -->
+            <div class="form-group">
+                <label class="form-label" for="attachment">Прикрепить файл</label>
+                <input type="file" name="attachment" id="attachment">
+            </div>
+
+
+
+            <!-- Пункт подтверждения -->
+            <div class="form-group">
+                <!-- value- значение при выборе -->
+                <input type="checkbox" name="agreement" id="agreement" value="yes">
+                <label for="agreement">Даю согласие на обработку персональных данных</label>
+
+            </div>
+
+
+            <!-- кнопка отправки формы -->
+            <input class="btn" type="submit" value="отправить">
+        </form>
+    </div>
+
+    <!-- Ботинки -->
+    <footer>
+        <form action="login.html">
+            <input class="btn_bottom" type="submit" value="Авторизация">
+
+        </form>
+    </footer>
+</body>
+
+
+</html>

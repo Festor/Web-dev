@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма Авторизации</title>
+    <link rel="stylesheet" href="styles/main.css">
+
+</head>
+
+<body>
+    <h1>Авторизация</h1>
+    <div class="container2">
+        <!-- Форма обращения к ресурсу-приемнику -->
+        <form action="http://httpbin.org/post" method="POST">
+
+
+            <!-- Группа форм отправки -->
+            <div class="form-login">
+                <!-- поле ввода -->
+                <label for="login" class="form-label">Имя пользователя / email</label>
+                <!-- Атрибут name указывает название отправляемого параметра -->
+                <!-- value - значение по умолчанию, required - необходим ввод -->
+                <!-- Прочие атриб: readonly(запрет редактирования), disabled (запрет отправки значения) -->
+                <input id="login" type="text" name="login"  required autofocus>
+            </div>
+
+            <div class="form-login" >
+                <label for="password" class="form-label">Пароль</label>
+                <!-- type - тип формы ввода, placeholder - подсказка -->
+                <input class="inputsize" id="password" type="password" name="password" required>
+            </div>
+
+            <input class="btn m1" type="submit" value="отправить">
+        </form>
+        </div>
+
+<!-- Ботинки -->
+    <footer class="form-back">
+            <form action="index.html">
+                <input class="btn_bottom" type="submit" value="Форма обратной связи">
+            
+        </form>
+    </footer>
+</body>
+
+</html>
