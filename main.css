@@ -1,0 +1,130 @@
+/* style */
+body {
+    margin: 0;
+    background-color: rgb(250, 239, 227);
+    max-width: 2300px;
+    max-height: 1500px;
+}
+
+header {
+    background-color: rgb(255, 230, 119);
+    border-bottom: 5px solid rgb(57, 5, 179);
+
+    min-height: 120px;
+    min-width: 500px;
+
+}
+
+.header-text {
+    /* Обтекание каждого объектов типа inline слева */
+    float: right;
+    max-width: 75%;
+    margin: 0 auto;
+
+    /* from header */
+    padding-top: 20px;
+    padding-right: 90px;
+
+
+
+}
+
+/* lobby */
+.welcome {
+    /* Тип объекта: в строку , целым блоком*/
+    display: inline-block;
+    font-size: 50px;
+    min-width: 310px;
+    padding-right: 150px;
+    color: rgb(57, 5, 179);
+}
+
+.go-back {
+    display: inline-block;
+    min-width: 170px;
+    padding-left: 140px;
+    padding-bottom: 0px;
+    padding-right: 130px;
+}
+
+/* back */
+.go-back a {
+    text-decoration: none;
+    font-size: 26px;
+    font-weight: bold;
+    max-height: 50px;
+    color: black;
+    border-left: 3px inset rgb(57, 5, 179);
+}
+.go-back a:focus {
+transition: color 1s 0.9s , font-size 0.5s ease-in-out, background-color 1s 0.2s ease-in-out;
+    background-color: rgb(250, 239, 227);
+    padding: 2px;
+    font-size: 30px;
+    border-bottom: 2px inset rgb(255, 60, 0);
+    color: rgb(57, 5, 179);
+}
+
+/* Распорка */
+.clearfix::after {
+    /* свойство контента */
+    content: "";
+    /* Тип отображения */
+    display: block;
+    /* Обтекание текста */
+    clear: both;
+}
+
+
+
+/* main menu */
+/* Основной блок */
+.main-menu {
+    display: block;
+    min-width: 200px;
+    min-height: 250px;
+
+    margin: 3rem;
+    margin-top: 4rem;
+    margin-bottom: 7rem;
+
+    padding: 70px;
+    padding-top: 20px;
+
+}
+
+/* Название */
+.main-menu>p {
+    display: inherit;
+    font-size: 30px;
+    font-weight: bold;
+    width: 150px;
+    padding-bottom: 8px;
+    padding-right: 32px;
+    border: 2px solid transparent;
+    border-bottom: 4px solid rgb(57, 5, 179);
+    margin: 0;
+}
+
+/* Элементы */
+.main-menu>a {
+    display: inherit;
+    padding: 8px 16px;
+    font-size: 30px;
+    width: 150px;
+    text-decoration: none;
+    color: black;
+    border: 2px solid silver;
+    border-bottom: 4px solid rgb(57, 5, 179);
+}
+
+/* Анимация */
+.main-menu>a:hover {
+    transition: color 0.2s ease-in-out;
+    color: rgb(102, 37, 255);
+}
+
+.main-menu>a:focus {
+    color: rgb(102, 37, 255);
+    border-bottom-color: rgb(10, 207, 10);
+}
