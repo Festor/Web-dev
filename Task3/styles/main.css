@@ -1,0 +1,252 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    min-width: 300px;
+}
+
+h3 {
+    margin-top: 0;
+}
+
+.header {
+    background-color: skyblue;
+    border-bottom: 5px solid rgb(80, 1, 80);
+    padding-top: 20px;
+    min-height: 70px;
+    /* Размер элемента со всеми отступами */
+    box-sizing: border-box;
+
+    /* Закрепить элемент на экране на top 0 */
+    position: sticky;
+    top: 0;
+}
+
+/* main-menu flex container */
+.main-menu {
+    /* Создание flex-контейнера */
+    display: flex;
+    /* Разрешить перенос элементов */
+    flex-wrap: wrap;
+
+}
+
+.main-menu a {
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-left: 15px;
+    color: black;
+}
+
+.main-menu a:active {
+color: rgb(121, 4, 121);
+
+}
+
+.navigation {
+    /* position: (относительно: relative - предка,absolute - области просмотра) */
+    /* top: 20px; left:20px;*/
+    /*ранее: float: left; */
+
+    /* Заполняет, оставшееся свободное пространство за последним элементом, отступом до след элемента */
+    flex-grow: 1;
+    /* Из flex-элемента сделать flex-контейнер для его подэлементов */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.profile {
+    /*ранее: float: right; */
+    display: flex;
+}
+
+/* Выравнивание заголовков */
+.container {
+    padding-top: 10px;
+    max-width: 75%;
+    margin: 0 auto;
+}
+
+/* flex-container of sidebar */
+.flex-wrapper {
+    display: flex;
+
+}
+
+/* Отступ снизу */
+.form-group {
+    margin-bottom: 5px;
+    min-width: 250px;
+}
+
+.sidebar {
+    font-size: 20px;
+    padding: 20px;
+    width: 220px;
+    /* Устанавливает размер элемента с учетом всех отступов */
+    box-sizing: border-box;
+    /* float */
+    /* ранее: float: left; */
+    margin-right: 20px;
+}
+
+.m-20 {
+    margin-top: 20px;
+}
+
+/* Отступ контейнера товаров на странице */
+.goods-list {
+
+    /* margin-left: 250px; */
+    margin-top: 20px;
+
+    /* Создать flex-container */
+    display: flex;
+    /* Разрешить перенос элементов */
+    flex-wrap: wrap;
+    /* Выравнивание: равный отступ между элементами и без отступа до границ */
+    justify-content: space-between;
+
+}
+
+/* Размер изображения товара */
+.goods-img img {
+    width: 230px;
+    height: auto;
+    /* Центрирование */
+    display: block;
+    margin: 0 auto;
+}
+
+/* Выстраивание товара в строку блоками */
+.goods {
+    /* При inline - учитываются пробелы в коде как отступы */
+    /* ранее:(float object) display: inline-block; */
+    border: 1px solid black;
+    min-height: 300px;
+    min-width: 230px;
+
+    padding: 15px;
+    margin-bottom: 10px;
+
+
+
+}
+
+.hidden {
+    /* display:none - скрывает блок */
+    /* visibility:hidden - Делает невидимым*/
+    visibility: hidden;
+}
+
+.price-and-buy {
+    height: 50px;
+}
+
+.price {
+    text-align: center;
+    display: inline-block;
+    height: 100%;
+    width: 50%;
+    /* Размер учитывает все отступы */
+    box-sizing: border-box;
+    background-color: orange;
+    font-weight: bold;
+    font-size: 25px;
+    padding-top: 10px;
+}
+
+.buy-btn {
+    text-align: center;
+    display: inline-block;
+    height: 100%;
+    width: 50%;
+    box-sizing: border-box;
+    background-color: black;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    padding-top: 10px;
+}
+
+.buy-btn:active {
+    padding-top: 8px;
+    border: 2px solid black;
+    background-color: rgb(80, 1, 80);
+}
+
+/* Pages */
+.Pages {
+    padding-top: 20px;
+}
+
+.Pages .btn {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(80, 1, 80);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+}
+
+.Pages .btn:active {
+    padding: 8px;
+    border: 2px solid rgb(80, 1, 80);
+    background-color: orange;
+    color: black;
+}
+
+.footer {
+    background-color: skyblue;
+    border-bottom: 5px solid rgb(80, 1, 80);
+    min-height: 100px;
+    font-size: 20px;
+
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+
+/* if floats: Clearfix for nav block (unusable)*/
+/* After - Добавляется как последний элемент 
+    внутрь контейнера с классом clearfix  */
+.clearfix::after {
+    /* Всегда указывать для псевдоэлементов их свойство */
+    content: "";
+    display: block;
+    /* Запрет обтекания содержимого лементов с содержимым float */
+    clear: both;
+}
+
+
+
+/* Адаптивная вёрстка. Правила для других устройств */
+/* Правило media начинает действовать при таком параметре (...) */
+@media all and (max-width: 600px) {
+    .main-menu {
+        flex-direction: column;
+    }
+
+    .navigation {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile {
+        justify-content: center;
+    }
+
+    /* Направление главной оси для товара*/
+    .flex-wrapper {
+        flex-direction: column;
+    }
+}

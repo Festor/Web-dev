@@ -1,13 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Интернет магазин</title>
+    <link rel="stylesheet" href="styles/main.css">
 </head>
+
 <body>
-    <p>
-        
-    </p>
+
+    <!-- header- блочный элемент - всегда распологается на новой строке
+         и занимает всю ширину родительского контейнера-->
+    <header class="header">
+        <div class="container">
+            <!-- nav- блочный элемент-->
+            <nav class="main-menu">
+                <div class="navigation">
+                    <!-- Строчные элементы выстраиваются в линию,
+                        занимает размер по содержимому -->
+                    <a href="#">Главная</a>
+                    <a href="#">Новости</a>
+                    <a href="#">Акции</a>
+                    <a href="#">Адреса</a>
+                    <a href="#">контакты</a>
+                </div>
+                <div class="profile">
+                    <a href="#">Личный кабинет</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+
+            <h1>Заголовок категории товаров</h1>
+            <div class="flex-wrapper">
+
+                <aside class="sidebar">
+                    <form>
+
+                        <section>
+                            <h3>Меню</h3>
+                            <!-- Кнопки меню выбора -->
+                            <div class="form-group">
+                                <input type="checkbox" name="manufacturer1" id="" value="1">
+                                <label for="manufacturer1">Кофе</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" name="manufacturer2" id="" value="2">
+                                <label for="manufacturer2">Блюда</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" name="manufacturer3" id="" value="3">
+                                <label for="manufacturer3">Десерты</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" name="manufacturer4" id="" value="4">
+                                <label for="manufacturer4">Холодные напитки</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" name="manufacturer5" id="" value="5">
+                                <label for="manufacturer5">Прочее</label>
+                            </div>
+                        </section>
+
+                        <section class="m-20">
+                            <h3>Адреса</h3>
+                            <!-- Кнопки меню выбора -->
+                            <div class="form-group">
+                                <input type="radio" name="group" id="" value="1">
+                                <label for="group1">Большая Полянка</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="radio" name="group" id="" value="2">
+                                <label for="group2">Воздвиженка</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="radio" name="group" id="" value="3">
+                                <label for="group3">Тверская</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="radio" name="group" id="" value="4">
+                                <label for="group4">Бауманская</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="radio" name="group" id="" value="5">
+                                <label for="group5">Ленинская Слобода</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Применить">
+                            </div>
+                        </section>
+
+                    </form>
+                </aside>
+                <!-- Отнесение блока goods-list в отдельный div -->
+                <div>
+
+                    <section class="goods-list">
+                        <!-- Блок товара -->
+                        <div class="goods">
+                            <div class="goods-img">
+                                <img src="img/Coffcup.jpg" alt="">
+                            </div>
+                            <div class="goods-description">
+                                <p>Кофе -  Эспрессо</p>
+                            </div>
+                            <div class="price-and-buy">
+                                <span class="price">120 руб.</span><a class="buy-btn" href="">Заказать</a>
+                            </div>
+                        </div>
+                        <div class="goods">
+                            <div class="goods-img">
+                                <img src="img/Coffcup.jpg" alt="">
+                            </div>
+                            <div class="goods-description">
+                                <p>Кофе - Американо</p>
+                            </div>
+                            <div class="price-and-buy">
+                                <span class="price">120 руб.</span><a class="buy-btn" href="">Заказать</a>
+                            </div>
+                        </div>
+                        <div class="goods">
+                            <div class="goods-img">
+                                <img src="img/Coffcup.jpg" alt="">
+                            </div>
+                            <div class="goods-description">
+                                <p>Кофе - Капучино</p>
+                            </div>
+                            <div class="price-and-buy">
+                                <span class="price">160 руб.</span><a class="buy-btn" href="">Заказать</a>
+                            </div>
+                        </div>
+                        <div class="goods">
+                            <div class="goods-img">
+                                <img src="img/Coffcup.jpg" alt="">
+                            </div>
+                            <div class="goods-description">
+                                <p>Кофе - Латте</p>
+                            </div>
+                            <div class="price-and-buy">
+                                <span class="price">160 руб.</span><a class="buy-btn" href="">Заказать</a>
+                            </div>
+                        </div>
+                        
+
+                        <div class="goods">
+                            <div class="goods-img">
+                                <img src="img/Coffcup.jpg" alt="">
+                            </div>
+                            <div class="goods-description">
+                                <p>Кофе - Моккочино</p>
+                            </div>
+                            <div class="price-and-buy">
+                                <span class="price">160 руб.</span><a class="buy-btn" href="">Заказать</a>
+                            </div>
+                        </div>
+                        <div class="goods">
+                            <div class="goods-img">
+                                <img src="img/Coffcup.jpg" alt="">
+                            </div>
+                            <div class="goods-description">
+                                <p>Кофе - Ристретто</p>
+                            </div>
+                            <div class="price-and-buy">
+                                <span class="price">160 руб.</span><a class="buy-btn" href="">Заказать</a>
+                            </div>
+                        </div>
+                        <div class="goods hidden">
+                            <div class="goods-img">
+                                <img src="img/Coffcup.jpg" alt="">
+                            </div>
+                            <div class="goods-description">
+                                <p> - </p>
+                            </div>
+                            <div class="price-and-buy">
+                                <span class="price">100 руб.</span><a class="buy-btn" href="">Заказать</a>
+                            </div>
+                        </div>
+                        <div class="goods hidden">
+                            <div class="goods-img">
+                                <img src="img/Coffcup.jpg" alt="">
+                            </div>
+                            <div class="goods-description">
+                                <p> - </p>
+                            </div>
+                            <div class="price-and-buy">
+                                <span class="price">170 руб.</span><a class="buy-btn" href="">Заказать</a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <div class="Pages">
+                        <a class="btn" href="#">1</a>
+                        <a class="btn" href="#">2</a>
+                        <a class="btn" href="#">3</a>
+                        <a class="btn" href="#">4</a>
+                        <a class="btn" href="#">5</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p> &copy; ЗАО "Кофейные дела"</p>
+        </div>
+    </footer>
 </body>
+
 </html>
