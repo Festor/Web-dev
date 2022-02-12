@@ -188,7 +188,7 @@ function evaluate(str) {
                     case '*':
                         number1 = number1 * number2; break;
                     case '/':
-                        number1 = number2 / number1; break;
+                        number1 = number1 / number2; break;
                 }
             }
         }
