@@ -2,17 +2,17 @@
 body {
     margin: 0;
     background-color: rgb(250, 239, 227);
-    max-width: 2300px;
-    max-height: 1500px;
+    min-width: 500px;
 }
 
 header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: rgb(255, 230, 119);
     border-bottom: 5px solid rgb(57, 5, 179);
-
-    min-height: 120px;
+    min-height: 200px;
     min-width: 500px;
-
 }
 
 .header-text {
@@ -20,31 +20,21 @@ header {
     float: right;
     max-width: 75%;
     margin: 0 auto;
-
-    /* from header */
-    padding-top: 20px;
-    padding-right: 90px;
-
-
-
 }
 
 /* lobby */
 .welcome {
-    /* Тип объекта: в строку , целым блоком*/
-    display: inline-block;
     font-size: 50px;
     min-width: 310px;
-    padding-right: 150px;
+    padding-bottom: 10%;
     color: rgb(57, 5, 179);
 }
 
 .go-back {
-    display: inline-block;
+    display: flex;
+    justify-content: right;
     min-width: 170px;
-    padding-left: 140px;
-    padding-bottom: 0px;
-    padding-right: 130px;
+
 }
 
 /* back */
@@ -56,8 +46,9 @@ header {
     color: black;
     border-left: 3px inset rgb(57, 5, 179);
 }
+
 .go-back a:focus {
-transition: color 1s 0.9s , font-size 0.5s ease-in-out, background-color 1s 0.2s ease-in-out;
+    transition: color 1s 0.9s, font-size 0.5s ease-in-out, background-color 1s 0.2s ease-in-out;
     background-color: rgb(250, 239, 227);
     padding: 2px;
     font-size: 30px;
@@ -65,32 +56,11 @@ transition: color 1s 0.9s , font-size 0.5s ease-in-out, background-color 1s 0.2s
     color: rgb(57, 5, 179);
 }
 
-/* Распорка */
-.clearfix::after {
-    /* свойство контента */
-    content: "";
-    /* Тип отображения */
-    display: block;
-    /* Обтекание текста */
-    clear: both;
-}
-
-
-
-/* main menu */
 /* Основной блок */
-.main-menu {
-    display: block;
-    min-width: 200px;
-    min-height: 250px;
-
-    margin: 3rem;
-    margin-top: 4rem;
-    margin-bottom: 7rem;
-
-    padding: 70px;
-    padding-top: 20px;
-
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 100px;
 }
 
 /* Название */
