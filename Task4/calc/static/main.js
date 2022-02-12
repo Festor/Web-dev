@@ -98,7 +98,7 @@ function compile(str) {
 function dotfunc(dotnum, afterdot) {
     let dotstr = (`${dotnum}`);
     let long = dotstr.length;
-    if (afterdot > long) { let element = 'error'; alert('Неправильный ввод'); return element }
+    if (afterdot > long && !dotnum == 0) { let element = 'error'; alert('Неправильный ввод'); return element }
     if (afterdot == 0) { let element = parseInt(str); return element }
     let element = dotstr.substr(0, long - afterdot) + '.' + dotstr.substr(long - afterdot, long);
     element = parseFloat(element);
@@ -196,7 +196,8 @@ function evaluate(str) {
             dot = 1;
         }
     }
-    if (!parseFloat(number1)) { return number1 = 'error' }
+    if (!parseFloat(number1) && !parseFloat(number1) == 0) { return number1 = 'error' }
+    if (!isFinite(number)) { return number1 = 'Infinity' }
     return number1.toFixed(2);
 }
 
@@ -224,14 +225,14 @@ function clickHandler(event) {
     // Работает проверка на нажатие на цифровой блок
     document.querySelector('.buttons').onclick = (event) => {
         // Переполнение экрана
-        if (!err && str.length >= 9) { err = 1; alert('Переполнение экрана'); }
+        if (!err && intscreen.textContent.length >= 9 && intscreen.textContent != 'Бесконечность') { err = 1; alert('Переполнение экрана'); }
         intscreen.textContent = str;
         // Проверка нажатий
         // Цифры и точка
         if (event.target.classList.contains('digit')) {
             // Проверка на Нажатую Цифру
             if (event.target.innerHTML != '.') {
-                block = false;
+                dotblock = false;
                 // Добавить текущий символ в конец массива
                 // str.push(event.target.innerHTML);
                 str += (event.target.innerHTML);
@@ -239,7 +240,7 @@ function clickHandler(event) {
                 intscreen.textContent += event.target.innerHTML;
 
                 // Проверка на 1. используется первый раз, 2. точка не вначале строки
-            } else if (!block && dot && str.length > 0) {
+            } else if (!dotblock && dot && str.length > 0) {
                 dot = false;
                 // intscreen.textContent = str;
                 str += (event.target.innerHTML);
@@ -274,9 +275,10 @@ function clickHandler(event) {
             // Результат
             if (event.target.classList.contains('result')) {
                 let result = evaluate(str);
-                if (isNaN(result)) { result = 'Ошибка' }
+                if (result == 'Infinity') { result = 'Бесконечность' }
+                else if (isNaN(result)) { result = 'Ошибка' }
+                if (parseFloat(result) || result == 0) { str = result } else { str = '' }
                 intscreen.textContent = result;
-                str = result;
             }
 
         }
