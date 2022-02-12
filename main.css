@@ -3,6 +3,7 @@ body {
     margin: 0;
     background-color: rgb(250, 239, 227);
     min-width: 500px;
+    min-height: 700px;
 }
 
 header {
@@ -24,6 +25,8 @@ header {
 
 /* lobby */
 .welcome {
+    display: flex;
+    flex-wrap: nowrap;
     font-size: 50px;
     min-width: 310px;
     padding-bottom: 10%;
@@ -32,6 +35,7 @@ header {
 
 .go-back {
     display: flex;
+    flex-wrap: nowrap;
     justify-content: right;
     min-width: 170px;
 
@@ -97,4 +101,20 @@ header {
 .main-menu>a:focus {
     color: rgb(102, 37, 255);
     border-bottom-color: rgb(10, 207, 10);
+}
+
+
+@media all and (max-width: 600px) {
+    body{
+        min-width: 300px;
+        min-height: 600px;
+    }
+    /* Направление главной оси для товара*/
+    header {
+        flex-direction: column;
+        justify-content: center;
+        min-height: 300px;
+        min-width: 300px;
+    }
+    
 }
