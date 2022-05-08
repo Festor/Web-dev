@@ -1,0 +1,51 @@
+
+footer{
+    
+    height: 5rem;
+    background-color: rgb(127, 255, 212);
+}
+.header mrgbot10{
+    margin-bottom: 10px;
+}
+.header h1{
+align-items: center;
+}
+
+.item{
+    background-color: rgb(136, 205, 201);
+
+    border: 1px solid;
+    min-width: 120px;
+}
+.itemImg{
+    height: 90px;
+    margin: 2px;
+}
+
+.itemL{
+    height: 500px;
+    background-color: rgb(236, 174, 174);
+    
+}
+.itemC{
+    height: 500px;
+    background-color: rgb(179, 231, 179);
+}
+.itemR{
+    height: 500px;
+    background-color: rgb(194, 215, 223);
+}
+
+.itemR p{
+    margin: 0;
+} 
+.itemR textarea{
+    resize: none;
+}
+
+.mainPng{
+    width: 153px;
+    height: 153px;
+    border: 3px solid;
+    border-color: blue;
+}

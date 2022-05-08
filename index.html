@@ -1,11 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <title>Кафе "У бывалого"</title>
 </head>
+
 <body>
-    <h1>Hello, world!</h1>
+    <!-- HEADER -->
+    <div class="header mrgbot10 container-fluid">
+        <!-- <div class="row"> -->
+        <!-- <div class="col-4 col-md-12"> -->
+        <div class="d-flex flex-col align-self-center  flex-wrap">
+            <!-- <div class="row-6 text-end row-md-4 " style="color:rgb(207, 97, 87);">Добро пожаловать</div> -->
+
+            <div class="col-xs-5 col-sm-4 col-md-4 ">
+                <img class="mainPng" src="static/sheep.png">
+            </div>
+
+            <div class=" col-sm-4 align-self-center">
+                <h1 class="h1">Закусочная кафешка</h1>
+            </div>
+            <div class="col-3 align-self-center">Hello and Welcome</div>
+            <p id="top"></p>
+        </div>
+        <!-- </div> -->
+        <!-- </div> -->
+    </div>
+    <!-- END header -->
+
+    
+    <!-- NAVIGATION BAR -->
+    <div class="navbar-container sticky-top bg-light">
+        <nav class="container  align-self-center navbar navbar-expand-md navbar-light bg-light">
+            <a class=" navbar-brand" href="#">Навигация сайта:</a>
+            <!-- Nav-Кнопка Добавить или убрать collapsed -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Добавить show -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav show">
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#"><span class="sr-only">║</span>
+                            Главная
+                            <span class="sr-only">║</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#top">Адреса</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu">Меню</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#order">Заказ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled curved" href="#"><u>Гость</u></a>
+                    </li>
+
+                    <!-- nav drop down menu из слова -->
+                    <!-- добавить show -->
+                     <!-- <li class="nav-item dropdown ">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropdown
+                        </a> -->
+                             <!-- show для показа меню -->
+                        <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li> -->
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- END navigation -->
+
+
+    <!-- MAIN CONTAINER -->
+    <div class="container-fluid align-self-start">
+        <div class="row ">
+            <!--Расположения align-items-end align-self-end ; Поместить вниз flex-блока-> d-flex align-items-end-->
+            <!-- LEFT side block -->
+            <div id="address" class="itemL col-sm-12 col-xl-2 text-center d-flex flex-column">
+                <h2>Выбор адреса</h2>
+                <div class="p-5 row"></div>
+                <div class="p-5 row"></div>
+                <div class="p-5 row"></div>
+                <div class="p-5 row"></div>
+                
+
+
+
+                <div class="p-2 row"></div>
+                <div class="p-2 row">
+                    <div id="menu" class="row"></div>
+                </div>
+            </div>
+
+            <!-- CENTER block -->
+            <div class="itemC col-sm-12 col-xl-6 text-center ">
+                <h2>Меню</h2>
+                <!-- Выравнивание блока товаров -->
+                <div class="">
+                    <!-- Первая строка -->
+                    <div class="d-flex flex-row align-self-start">
+                        <!-- "Элементы" -->
+                        <div class="p-2 item col-4 text-center">
+                            <h1 class="h5">Coffee cup</h1>
+                            <img class="itemImg" src="static/coffee-cup.png">
+                        </div>
+                        <div class="p-2 item col-4 text-center">
+                            <h1 class="h5">Coffee cup</h1>
+                            <img class="itemImg" src="static/coffee-cup.png">
+                        </div>
+                        <div class="p-2 item col-4 text-center">
+                            <h1 class="h5">Coffee cup</h1>
+                            <img class="itemImg" src="static/coffee-cup.png">
+                        </div>
+
+                    </div>
+
+                    <!-- Вторая строка -->
+                    <div class="d-flex flex-row align-self-start">
+                        <!-- "Элементы" -->
+                        <div class="p-2 item col-4 text-center">
+                            <h1 class="h5">Coffee cup</h1>
+                            <img class="itemImg" src="static/coffee-cup.png">
+                        </div>
+                        <div class="p-2 item col-4 text-center">
+                            <h1 class="h5">Coffee cup</h1>
+                            <img class="itemImg" src="static/coffee-cup.png">
+                        </div>
+                        <div class="p-2 item col-4 text-center">
+                            <h1 class="h5">Coffee cup</h1>
+                            <img class="itemImg" src="static/coffee-cup.png">
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- RIGHT block -->
+            <div id="order" class="itemR col-sm-12 col-xl-4 text-center">
+                <h2>Оформление заказа</h2>
+                <div class="container d-flex flex-column justify-content-end">
+                    <p>Пожалуйста, заполните информацию для оформления заказа</p>
+                    <div class="p-1">
+                        <p>Ваше имя</p>
+                        <input name="name" type="text" placeholder="Ваше имя" required size="11"><span
+                            class="validity"></span>
+                    </div>
+                    <div class="p-1">
+                        <p>Ваш номер телефона</p>
+                        <input pattern="[0-9]{9,11}" value="+7" name="phone" type="tel" placeholder="начиная с +7"
+                            required>
+                    </div>
+
+                    <div class="p-1">
+                        <p>Комментарий к заказу</p>
+                        <!-- <input name="comment" type="text" placeholder="Хочу, чтобы...">-->
+                        <textarea id="story" name="story" rows="6" cols="40" maxlength="200"></textarea>
+                    </div>
+
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Поиск" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Найти</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- END main container -->
+    <footer class="container-fluid row-12 text-start align-items-begin">
+        <details class="row">
+            <summary>Дополнительная информация</summary>
+            <p class="col-sm-6 col-9">
+                Hello, This is my EXAMple of order-page</p>
+        </details>
+    </footer>
 </body>
+
 </html>
