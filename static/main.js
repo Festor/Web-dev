@@ -40,11 +40,7 @@ function togglerShow() {
     }
 }
 
-function navSuggest(event){
 
-    event.target.innerHTML
-    document.querySelector('.nav-link').classList.add("border-bottom");
-}
 
 
 // navbar suggest hide
