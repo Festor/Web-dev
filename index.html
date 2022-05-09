@@ -11,85 +11,119 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-
+    <script src="static/main.js" defer></script>
     <title>Кафе "У бывалого"</title>
 </head>
 
 <body>
     <!-- HEADER -->
-    <div class="header mrgbot10 container-fluid">
+    <div class="header container-fluid">
         <!-- <div class="row"> -->
         <!-- <div class="col-4 col-md-12"> -->
-        <div class="d-flex flex-col align-self-center  flex-wrap">
+        <div class="d-flex flex-col align-items-center  justify-content-start  flex-wrap">
             <!-- <div class="row-6 text-end row-md-4 " style="color:rgb(207, 97, 87);">Добро пожаловать</div> -->
 
-            <div class="col-xs-5 col-sm-4 col-md-4 ">
-                <img class="mainPng" src="static/sheep.png">
+            <div class=" ">
+              <a href="#">
+                <img class="mainPng" src="static/images/sheep.png"></a>
             </div>
 
-            <div class=" col-sm-4 align-self-center">
-                <h1 class="h1">Закусочная кафешка</h1>
+            <div class="">
+                <h1 class="ms-lg-5 ms-2 me-1 h1">Закусочная кафешка</h1>
             </div>
-            <div class="col-3 align-self-center">Hello and Welcome</div>
-            <p id="top"></p>
+            <!-- <div class="col-3 align-self-center">Hello and Welcome</div> -->
+            <div class="alerts align-self-center text-center mb-2 ms-auto">message will appear here</div>
         </div>
         <!-- </div> -->
         <!-- </div> -->
     </div>
-    <!-- END header -->
 
-    
+    <div class="container-fluid p-0">
+        <!-- <div class="alerts text-center bg-light">message will appear here</div> -->
+    </div>
+
     <!-- NAVIGATION BAR -->
+   
     <div class="navbar-container sticky-top bg-light">
-        <nav class="container  align-self-center navbar navbar-expand-md navbar-light bg-light">
+        <nav class="ml-md-5 container  align-self-center navbar navbar-expand-md navbar-light bg-light">
             <a class=" navbar-brand" href="#">Навигация сайта:</a>
             <!-- Nav-Кнопка Добавить или убрать collapsed -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <!-- Добавить show -->
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav show">
+                <!-- <ul class="container ms-2 navbar-nav show mr-auto"> -->
+                <ul class="container-fluid d-flex-row ms-2 navbar-nav show justify-content-start">
 
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#"><span class="sr-only">║</span>
+                    <li class="nav-item  active">
+                        <a class="nav-link" href="#">
+                            <!-- <span class="sr-only">║</span> -->
                             Главная
-                            <span class="sr-only">║</span></a>
+                            <!-- <span class="sr-only">║</span> -->
+                        </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#top">Адреса</a>
+                    <li class="nav-item me-2">
+                        <a class="nav-link" href="#addr">Адреса</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item me-2">
                         <a class="nav-link" href="#menu">Меню</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item me-2">
                         <a class="nav-link" href="#order">Заказ</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled curved" href="#"><u>Гость</u></a>
+                    <li class="nav-item me-2 align-self-end">
+                        <a class=" nav-link disabled curved" href="#"><u>Гость</u></a>
                     </li>
 
-                    <!-- nav drop down menu из слова -->
-                    <!-- добавить show -->
-                     <!-- <li class="nav-item dropdown ">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Dropdown
-                        </a> -->
-                             <!-- show для показа меню -->
-                        <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                    </li> -->
+
                 </ul>
             </div>
         </nav>
     </div>
     <!-- END navigation -->
+
+
+
+    <!-- КАРУСЕЛЬ -->
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel ">
+        <div class=" d-flex align-items-center justify-content-center ">
+
+            <div class=" carousel-inner align-self-baseline ">
+                <div class="carousel-item active">
+                    <img src="https://img2.goodfon.ru/original/800x480/8/1e/wyoming-usa-grand-teton.jpg"
+                        class="d-block w-100" alt="...">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="https://img2.goodfon.ru/original/800x480/8/1e/wyoming-usa-grand-teton.jpg"
+                        class="d-block w-100" alt="...">
+                </div>
+            </div>
+
+            <button class=" carousel-control-prev " type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Предыдущий</span>
+            </button>
+
+            <button class=" carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Следующий</span>
+            </button>
+            <p class="p-4 mb-1 align-self-end visually-hidden" id="addr"></p>
+        </div>
+
+    </div>
+    <!-- END карусели -->
+
+
+    <!-- END header -->
+
+
+
 
 
     <!-- MAIN CONTAINER -->
@@ -103,7 +137,7 @@
                 <div class="p-5 row"></div>
                 <div class="p-5 row"></div>
                 <div class="p-5 row"></div>
-                
+
 
 
 
@@ -123,15 +157,15 @@
                         <!-- "Элементы" -->
                         <div class="p-2 item col-4 text-center">
                             <h1 class="h5">Coffee cup</h1>
-                            <img class="itemImg" src="static/coffee-cup.png">
+                            <img class="itemImg" src="static/images/coffee-cup.png">
                         </div>
                         <div class="p-2 item col-4 text-center">
                             <h1 class="h5">Coffee cup</h1>
-                            <img class="itemImg" src="static/coffee-cup.png">
+                            <img class="itemImg" src="static/images/coffee-cup.png">
                         </div>
                         <div class="p-2 item col-4 text-center">
                             <h1 class="h5">Coffee cup</h1>
-                            <img class="itemImg" src="static/coffee-cup.png">
+                            <img class="itemImg" src="static/images/coffee-cup.png">
                         </div>
 
                     </div>
@@ -139,17 +173,26 @@
                     <!-- Вторая строка -->
                     <div class="d-flex flex-row align-self-start">
                         <!-- "Элементы" -->
-                        <div class="p-2 item col-4 text-center">
+                        <div id="item1" class="p-2 item col-4 text-center">
                             <h1 class="h5">Coffee cup</h1>
-                            <img class="itemImg" src="static/coffee-cup.png">
+                            <img class="itemImg" src="static/images/coffee-cup.png">
                         </div>
-                        <div class="p-2 item col-4 text-center">
+
+                        <div id="item2" class="p-2 item col-4 text-center">
                             <h1 class="h5">Coffee cup</h1>
-                            <img class="itemImg" src="static/coffee-cup.png">
+                            <img class="itemImg" src="static/images/coffee-cup.png">
+                            <p class="p-0 m-0 pb-1  descript">Та чашка кофе, которая так нужна тебе в это нелёгкое время</p>
+                            <h6 class="price-value">200 руб.</h6>
+                            <div class="amount d-flex flex-row justify-content-center align-items-start">
+                                <div class="sign minus"><h4>-</h4></div>
+                                <input class="align-self-center price-amount" type="text" name="amount" id="amount">
+                                <div class=" sign plus"><h4>+</h4></div>
+                            </div>
                         </div>
-                        <div class="p-2 item col-4 text-center">
+
+                        <div id="item3" class="p-2 item col-4 text-center">
                             <h1 class="h5">Coffee cup</h1>
-                            <img class="itemImg" src="static/coffee-cup.png">
+                            <img class="itemImg" src="static/images/coffee-cup.png">
                         </div>
 
                     </div>
@@ -191,10 +234,20 @@
 
     <!-- END main container -->
     <footer class="container-fluid row-12 text-start align-items-begin">
-        <details class="row">
+        <details class="d-flex flex-row justify-content-between" open>
             <summary>Дополнительная информация</summary>
-            <p class="col-sm-6 col-9">
-                Hello, This is my EXAMple of order-page</p>
+            
+        
+            <div class="d-flex flex-row  justify-content-between">
+                <p class="p-0 m-0">
+                    Hello, This is a beutiful order page
+                    <br> try yourself</p>
+                    <div class="d-flex flex-row justify-content-between">
+                        <p class="mb-0 pt-2 pe-2 p-0 align-self-start">Контакты: </p>
+                <a class="" href="https://github.com/Festor"><img class="h-1"
+                        src="https://cdn.iconscout.com/icon/free/png-256/github-1521500-1288242.png" /></a>
+                    </div>
+                    </div>
         </details>
     </footer>
 </body>

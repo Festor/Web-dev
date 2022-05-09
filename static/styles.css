@@ -1,36 +1,111 @@
-
+/* footer */
 footer{
-    
     height: 5rem;
     background-color: rgb(127, 255, 212);
 }
-.header mrgbot10{
+footer img{
+    height: 45px;
+}
+/* header */
+.mainPng{
+    width: 153px;
+    height: 153px;
+    border: 3px solid;
+    border-color: rgb(73, 174, 225);
+    border-radius: 15px;
+}
+.header .mrgbot10{
     margin-bottom: 10px;
 }
 .header h1{
 align-items: center;
 }
 
+
+/* Navigation */
+a.nav-link{
+    border-bottom: 1px solid white;
+}
+a.nav-link:hover{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.356);
+}
+
+
+
+
+/* Carousel */
+.carousel .carousel-inner{
+    justify-content: center;
+    flex-grow: 1;
+    
+}
+.carousel .carousel-control-next{
+    background-color: rgba(145, 255, 218, 0.161);
+    flex-grow: 2;
+}
+.carousel .carousel-control-prev{
+    background-color: rgba(145, 255, 218, 0.161);
+    flex-grow: 2;
+}
+
+/* .border-bottom{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.072);
+} */
+
+
+/* Menu section */
 .item{
     background-color: rgb(136, 205, 201);
 
     border: 1px solid;
     min-width: 120px;
 }
+.item .price-amount{
+width: 28px;
+
+}
+.item .sign{
+    margin: 0;
+    padding: 0;
+    height: 30px;
+    width: 30px;
+    border: 1px solid black;
+    border-radius: 20px;
+    font-size: 40px;
+    size: 50px;
+color: black;
+}
+.item .descript{
+    font-size: 15px;
+}
+.item input{
+    
+    align-self: start;
+    height: 20px;
+    text-align: center;
+}
+
 .itemImg{
     height: 90px;
     margin: 2px;
-}
-
-.itemL{
-    height: 500px;
-    background-color: rgb(236, 174, 174);
-    
 }
 .itemC{
     height: 500px;
     background-color: rgb(179, 231, 179);
 }
+.itemC .item .minus .plus{
+    color: red;
+    
+}
+
+/* Address section */
+.itemL{
+    height: 500px;
+    background-color: rgb(236, 174, 174);
+    
+}
+
+/* Order section */
 .itemR{
     height: 500px;
     background-color: rgb(194, 215, 223);
@@ -43,9 +118,3 @@ align-items: center;
     resize: none;
 }
 
-.mainPng{
-    width: 153px;
-    height: 153px;
-    border: 3px solid;
-    border-color: blue;
-}
