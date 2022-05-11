@@ -6,12 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="static/styles.css">
+    <script src="static/main.js" defer></script>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-    <script src="static/main.js" defer></script>
+
     <title>Кафе "У бывалого"</title>
 </head>
 
@@ -24,15 +26,16 @@
             <!-- <div class="row-6 text-end row-md-4 " style="color:rgb(207, 97, 87);">Добро пожаловать</div> -->
 
             <div class=" ">
-              <a href="#">
-                <img class="mainPng" src="static/images/sheep.png"></a>
+                <a href="#">
+                    <img class="mainPng" src="static/images/sheep.png"></a>
             </div>
 
             <div class="">
                 <h1 class="ms-lg-5 ms-2 me-1 h1">Закусочная кафешка</h1>
             </div>
             <!-- <div class="col-3 align-self-center">Hello and Welcome</div> -->
-            <div class="alerts align-self-center text-center mb-2 ms-auto">message will appear here</div>
+            <div class="alerts mb-2 ms-auto p-2 border border-info" role="alert">
+            message will appear here</div>
         </div>
         <!-- </div> -->
         <!-- </div> -->
@@ -43,7 +46,7 @@
     </div>
 
     <!-- NAVIGATION BAR -->
-   
+
     <div class="navbar-container sticky-top bg-light">
         <nav class="ml-md-5 container  align-self-center navbar navbar-expand-md navbar-light bg-light">
             <a class=" navbar-brand" href="#">Навигация сайта:</a>
@@ -65,13 +68,13 @@
                         </a>
                     </li>
                     <li class="nav-item me-2">
-                        <a class="nav-link" href="#addr">Адреса</a>
+                        <a class="nav-link" href="#aboutus">Наш сервис</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link" href="#place">Выбрать место</a>
                     </li>
                     <li class="nav-item me-2">
                         <a class="nav-link" href="#menu">Меню</a>
-                    </li>
-                    <li class="nav-item me-2">
-                        <a class="nav-link" href="#order">Заказ</a>
                     </li>
                     <li class="nav-item me-2 align-self-end">
                         <a class=" nav-link disabled curved" href="#"><u>Гость</u></a>
@@ -113,7 +116,7 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Следующий</span>
             </button>
-            <p class="p-4 mb-1 align-self-end visually-hidden" id="addr"></p>
+            <p class="p-4 mb-1 align-self-end visually-hidden" id="aboutus"></p>
         </div>
 
     </div>
@@ -122,132 +125,253 @@
 
     <!-- END header -->
 
-
-
-
+    <!-- 
+------------------------------------------------------------------
+------------------------------------------------------------------
+------------------------------------------------------------------
+ -->
 
     <!-- MAIN CONTAINER -->
     <div class="container-fluid align-self-start">
         <div class="row ">
             <!--Расположения align-items-end align-self-end ; Поместить вниз flex-блока-> d-flex align-items-end-->
-            <!-- LEFT side block -->
-            <div id="address" class="itemL col-sm-12 col-xl-2 text-center d-flex flex-column">
-                <h2>Выбор адреса</h2>
-                <div class="p-5 row"></div>
-                <div class="p-5 row"></div>
-                <div class="p-5 row"></div>
-                <div class="p-5 row"></div>
-
-
+            <!-- About us side block -->
+            <div id="idaboutus" class="sector-aboutus col-sm-12 d-flex flex-column">
+                <h2 class="h2 text-center">Наша служба хороша</h2>
+                <div class="row mt-auto mb-auto text-center align-self-center justify-content-center">
+                <div class="col-6 mr-5">
+                    <div class="p-3 m-5 border border-success">Лучшие места</div>
+                    <div class="p-3 m-5 border border-success">Большой ассортимент</div>
+                </div>
+                <div class="col-6 ml-5">
+                    <div class="p-1 m-5  border border-success">Быстрая обработка заказов</div>
+                    <div class="p-3 m-5  border border-success">Хорошее настроение</div>
+                </div>
+                
+            </div>
 
 
                 <div class="p-2 row"></div>
                 <div class="p-2 row">
-                    <div id="menu" class="row"></div>
+                    <p class="p-2 mb-4 align-self-end visually-hidden" id="place"></p>
                 </div>
             </div>
 
-            <!-- CENTER block -->
-            <div class="itemC col-sm-12 col-xl-6 text-center ">
-                <h2>Меню</h2>
-                <!-- Выравнивание блока товаров -->
+            <!-- ORDER block -->
+            <div id="idplace" class="sector-place col-sm-12  text-center">
+                <h2 class="h2 text-center">Выбор предприятия</h2>
                 <div class="">
-                    <!-- Первая строка -->
-                    <div class="d-flex flex-row align-self-start">
-                        <!-- "Элементы" -->
-                        <div class="p-2 item col-4 text-center">
-                            <h1 class="h5">Coffee cup</h1>
-                            <img class="itemImg" src="static/images/coffee-cup.png">
+                    <!-- addr-panel List -->
+                    <div
+                        class="addr-panel container d-flex flex-column flex-nowrap align-items-begin justify-content-center">
+                        <div class="addr-head d-flex flex-row flex-nowrap justify-content-between align-items-center">
+                            <div class="name1 addr-item-name col-3">Название</div>
+                            <div class="name2 addr-item-type col-2">Тип</div>
+                            <div class="name3 addr-item-place col-5">Адрес</div>
+                            <div class="name4 addr-head-action col-2">Действие</div>
                         </div>
-                        <div class="p-2 item col-4 text-center">
-                            <h1 class="h5">Coffee cup</h1>
-                            <img class="itemImg" src="static/images/coffee-cup.png">
-                        </div>
-                        <div class="p-2 item col-4 text-center">
-                            <h1 class="h5">Coffee cup</h1>
-                            <img class="itemImg" src="static/images/coffee-cup.png">
-                        </div>
+                        <div class="addr-list">
+                            <div
+                                class="visually-hidden addr-item-sample d-flex flex-row flex-nowrap justify-content-between align-items-center">
+                                <div class="addr-item-name col-3">Столовка "Общажная"</div>
+                                <div class="addr-item-type col-2">Столовка</div>
+                                <div class="addr-item-place col-5">Город Москва, Тестовая улица 16</div>
+                                <input class="addr-item-action col-2" type="button" value="Выбрать">
+                            </div>
 
+                        </div>
                     </div>
 
-                    <!-- Вторая строка -->
-                    <div class="d-flex flex-row align-self-start">
-                        <!-- "Элементы" -->
-                        <div id="item1" class="p-2 item col-4 text-center">
-                            <h1 class="h5">Coffee cup</h1>
-                            <img class="itemImg" src="static/images/coffee-cup.png">
+
+
+
+                    <div class="container d-flex flex-column justify-content-end">
+
+                        <p>Пожалуйста, заполните информацию для оформления заказа</p>
+                        <div class="p-1">
+                            <p>Ваше имя</p>
+                            <input name="name" type="text" placeholder="Ваше имя" required size="11"><span
+                                class="validity"></span>
+                        </div>
+                        <div class="p-1">
+                            <p>Ваш номер телефона</p>
+                            <input pattern="[0-9]{9,11}" value="+7" name="phone" type="tel" placeholder="начиная с +7"
+                                required>
                         </div>
 
-                        <div id="item2" class="p-2 item col-4 text-center">
-                            <h1 class="h5">Coffee cup</h1>
-                            <img class="itemImg" src="static/images/coffee-cup.png">
-                            <p class="p-0 m-0 pb-1  descript">Та чашка кофе, которая так нужна тебе в это нелёгкое время</p>
-                            <h6 class="price-value">200 руб.</h6>
-                            <div class="amount d-flex flex-row justify-content-center align-items-start">
-                                <div class="sign minus"><h4>-</h4></div>
-                                <input class="align-self-center price-amount" type="text" name="amount" id="amount">
-                                <div class=" sign plus"><h4>+</h4></div>
+                        <div class="p-1">
+                            <p>Комментарий к заказу</p>
+                            <!-- <input name="comment" type="text" placeholder="Хочу, чтобы...">-->
+                            <textarea id="story" name="story" rows="6" cols="40" maxlength="200"></textarea>
+                        </div>
+
+                        <!-- <form class="form-inline my-2 my-lg-0">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Поиск" aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Найти</button>
+                        </form> -->
+                        <p class=" p-3 mb-3 align-self-end visually-hidden" id="menu"></p>
+                    </div>
+                   
+                    
+                </div>
+            </div>
+
+
+
+
+
+
+            <!-- MENU block -->
+            <div id="idmenu" class="sector-menu col-sm-12 text-center ">
+                <h2 class="h2">Меню</h2>
+                <!-- Выравнивание блока товаров -->
+                <div class="item-elements d-flex flex-row flex-wrap align-items-start justify-content-center">
+
+                    <!-- Элемент шаблон -->
+                    <div id="item-Number"
+                        class="visually-hidden pagination item pr-5 pl-5  text-center d-flex flex-column flex-wrap align-items-center justify-content-center">
+                        <h1 class="h5 name">ИМЯ</h1>
+                        <img class="itemImg" src="static/images/coffee-cup.png">
+                        <p class="p-0 px-1 m-0 pb-1  descript">ОПИСАНИЕ</p>
+                        <h6 class="price">ЦЕНА</h6>
+                        <div class=" amount d-flex flex-row justify-content-between align-items-start">
+                            <div class="sign minus">
+                                <h4>-</h4>
+                            </div>
+                            <input id="item-amount-1" class="align-self-center price-amount" value="0" type="text"
+                                name="amount">
+                            <div class="sign plus">
+                                <h4>+</h4>
                             </div>
                         </div>
-
-                        <div id="item3" class="p-2 item col-4 text-center">
-                            <h1 class="h5">Coffee cup</h1>
-                            <img class="itemImg" src="static/images/coffee-cup.png">
-                        </div>
-
                     </div>
+                    <!-- Конец шаблона -->
+
+
+                    <!-- ЭЛЕМЕНТЫ МЕНЮ -->
+                    <div id="item1"
+                        class="pagination item pr-5 pl-5  text-center d-flex flex-column flex-wrap align-items-center justify-content-center">
+                        <h1 class="h5">Coffee cup</h1>
+                        <img class="itemImg" src="static/images/coffee-cup.png">
+                        <p class="p-0 px-1 m-0 pb-1  descript">Та чашка кофе, которая так нужна тебе в это нелёгкое
+                            время</p>
+                        <h6 class="price-value">200 руб.</h6>
+                        <div class=" amount d-flex flex-row justify-content-between align-items-start">
+                            <div class="sign minus">
+                                <h4>-</h4>
+                            </div>
+                            <input id="price-amount-1" class="align-self-center price-amount" value="0" type="text"
+                                name="amount">
+                            <div class="sign plus">
+                                <h4>+</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="item2"
+                        class="pr-5 pl-5 item text-center d-flex flex-column flex-wrap align-items-center justify-content-center">
+                        <h1 class="h5">Coffee cup</h1>
+                        <img class="itemImg" src="static/images/coffee-cup.png">
+                        <p class="p-0 px-1 m-0 pb-1  descript">Та чашка кофе, которая так нужна тебе в это нелёгкое
+                            время</p>
+                        <h6 class="price-value">200 руб.</h6>
+                        <div class="amount d-flex flex-row justify-content-between align-items-start">
+                            <div class="sign minus">
+                                <h4>-</h4>
+                            </div>
+                            <input id="price-amount-2" class="align-self-center price-amount" value="0" type="text"
+                                name="amount">
+                            <div class=" sign plus">
+                                <h4>+</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="item3"
+                        class="pr-5 pl-5 item text-center d-flex flex-column flex-wrap align-items-center justify-content-center">
+                        <h1 class="h5">Coffee cup</h1>
+                        <img class="itemImg" src="static/images/coffee-cup.png">
+                        <p class="p-0 px-1 m-0 pb-1  descript">Та чашка кофе, которая так нужна тебе в это нелёгкое
+                            время</p>
+                        <h6 class="price-value">200 руб.</h6>
+                        <div class=" amount d-flex flex-row justify-content-between align-items-start">
+                            <div class="sign minus">
+                                <h4>-</h4>
+                            </div>
+                            <input id="price-amount-3" class="align-self-center price-amount" value="0" type="text"
+                                name="amount">
+                            <div class="sign plus">
+                                <h4>+</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="item4"
+                        class="pr-5 pl-5 item text-center d-flex flex-column flex-wrap align-items-center justify-content-center">
+                        <h1 class="h5">Coffee cup</h1>
+                        <img class="itemImg" src="static/images/coffee-cup.png">
+                        <p class="p-0 px-1 m-0 pb-1  descript">Та чашка кофе, которая так нужна тебе в это нелёгкое
+                            время</p>
+                        <h6 class="price-value">200 руб.</h6>
+                        <div class=" amount d-flex flex-row justify-content-between align-items-start">
+                            <div class="sign minus">
+                                <h4>-</h4>
+                            </div>
+                            <input id="price-amount-4" class="align-self-center price-amount" value="0" type="text"
+                                name="amount">
+                            <div class=" sign plus">
+                                <h4>+</h4>
+                            </div>
+                        </div>
+                    </div>
+
+              
+
+
+
+
                 </div>
 
             </div>
 
-            <!-- RIGHT block -->
-            <div id="order" class="itemR col-sm-12 col-xl-4 text-center">
-                <h2>Оформление заказа</h2>
-                <div class="container d-flex flex-column justify-content-end">
-                    <p>Пожалуйста, заполните информацию для оформления заказа</p>
-                    <div class="p-1">
-                        <p>Ваше имя</p>
-                        <input name="name" type="text" placeholder="Ваше имя" required size="11"><span
-                            class="validity"></span>
-                    </div>
-                    <div class="p-1">
-                        <p>Ваш номер телефона</p>
-                        <input pattern="[0-9]{9,11}" value="+7" name="phone" type="tel" placeholder="начиная с +7"
-                            required>
-                    </div>
 
-                    <div class="p-1">
-                        <p>Комментарий к заказу</p>
-                        <!-- <input name="comment" type="text" placeholder="Хочу, чтобы...">-->
-                        <textarea id="story" name="story" rows="6" cols="40" maxlength="200"></textarea>
-                    </div>
 
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Поиск" aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Найти</button>
-                    </form>
+
+            <!-- Addition sector -->
+            <div id="idaddition" class=" sector-addition col-sm-12 col-xl-12 text-center">
+                <h2 class="h2">Дополнительные опции</h2>
+                <div class="d-flex flex-row flex-wrap justify-content-center">
+                    <div class="h5 w-50">Hello my friend</div>
+                    <div class="h5 w-50">Hello my friend</div>
+                    <div class="h5 w-50">Hello my friend</div>
+                    <div class="h5 w-50">Hello my friend</div>
+
                 </div>
             </div>
         </div>
     </div>
 
 
+
     <!-- END main container -->
+
+
     <footer class="container-fluid row-12 text-start align-items-begin">
-        <details class="d-flex flex-row justify-content-between" open>
+        <details id="details" class="d-flex flex-row justify-content-between" open>
             <summary>Дополнительная информация</summary>
-            
-        
+
+
             <div class="d-flex flex-row  justify-content-between">
                 <p class="p-0 m-0">
-                    Hello, This is a beutiful order page
-                    <br> try yourself</p>
-                    <div class="d-flex flex-row justify-content-between">
-                        <p class="mb-0 pt-2 pe-2 p-0 align-self-start">Контакты: </p>
-                <a class="" href="https://github.com/Festor"><img class="h-1"
-                        src="https://cdn.iconscout.com/icon/free/png-256/github-1521500-1288242.png" /></a>
-                    </div>
-                    </div>
+                    Hello, this is a beta of beutiful order page
+                    <br> try yourself
+                </p>
+                <div class="d-flex flex-row justify-content-between">
+                    <p class="mb-0 pt-2 pe-2 p-0 align-self-start">Контакты: </p>
+                    <a class="" href="https://github.com/Festor"><img class="h-1"
+                            src="https://cdn.iconscout.com/icon/free/png-256/github-1521500-1288242.png" /></a>
+                </div>
+            </div>
         </details>
     </footer>
 </body>
